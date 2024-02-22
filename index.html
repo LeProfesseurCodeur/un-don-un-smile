@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Un don, Un smile - Ensemble, offrons-leur de la joie</title>
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo-sf.png" type="image/svg+xml">
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cuprum:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <!--
+    - Fontawesome
+  -->
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--
+    - Boostrap
+  -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script> -->
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+</head>
+
+<body>
+  <!-- 
+    - #HEADER
+  -->
+  <header class="header" data-header>
+    <div class="container">
+      <img src="./assets/images/logo-sf.png" style="position: absolute; width: 140px; margin-top: 25px;">
+      <a href="#" class="logo"></a>
+      <nav class="navbar" data-navbar style="margin-right: auto; margin-left: auto;">
+        <div class="wrapper">
+          <a href="#" class="logo">Hoolix</a>
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li>
+            <a href="#home" class="navbar-link" data-nav-link>Accueil</a>
+          </li>
+          <li>
+            <a href="#about" class="navbar-link" data-nav-link>L'association</a>
+          </li>
+          <li class="parent">
+            <a href="#features" class="navbar-link" data-nav-link>Donnations</a>
+            <ul class="child">
+              <li><a href="collecte.html" class="">La collecte</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#services" class="navbar-link" data-nav-link>L'équipes</a>
+          </li>
+          <style>
+            .parent:hover>ul {
+              display: block;
+              position: absolute;
+            }
+
+            .child {
+              display: none;
+            }
+
+            .child li {
+              background-color: #edfffd;
+              line-height: 35px;
+              width: 71%;
+              border-radius: 5px;
+              text-align: center;
+            }
+
+            .child li a {
+              color: #000000;
+            }
+
+            ul {
+              list-style: none;
+              margin: 0;
+              padding: 0px;
+              min-width: 8.25em;
+            }
+
+            ul ul ul {
+              left: 100%;
+              top: 0;
+              margin-left: 1px;
+            }
+
+            .expand {
+              font-size: 12px;
+              float: right;
+              margin-right: 5px;
+            }
+          </style>
+          <li>
+            <a href="#" class="navbar-link" data-nav-link>Blog</a>
+          </li>
+          <li>
+            <a href="#" class="navbar-link" data-nav-link>Contactez-nous</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <!-- 
+        - #ACCUEIL
+      -->
+      <section class="section hero" id="home" aria-label="hero">
+        <div class="container">
+          <div class="hero-content">
+            <p class="hero-subtitle has-before">Bienvenue sur Un don Un smile</p>
+            <h1 class="h1 hero-title">Des petits gestes, des grands changements</h1>
+            <p class="hero-text">
+              L'association Un don, Un smile collecte des fournitures et des dons financiers pour l'hôpital Robert Debré, soutenant le service pédiatrique.
+            </p>
+            <div class="btn-group">
+              <a href="#" class="btn btn-primary">Nous rejoindre</a>
+            </div>
+          </div>
+          <figure class="hero-banner has-before img-holder" style="--width: 650; --height: 650;">
+            <img src="./assets/images/54950.jpg" width="650" height="650" alt="hero banner" class="img-cover">
+          </figure>
+        </div>
+      </section>
+
+      <!-- 
+        - #ASSOCIATION
+      -->
+      <section class="section about" id="about" aria-label="about">
+        <div class="container">
+          <figure class="about-banner-logo">
+            <img src="./assets/images/logo-sf-1.png" width="802" height="654" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+
+          <div class="about-content">
+
+            <h2 class="h2-sm section-title">Ensemble, offrons-leur de la joie</h2>
+
+            <p class="section-text">
+              L'association à but non lucratif Un don, Un smile incarne un engagement sans faille envers sa noble mission de collecter divers dons, allant des 
+              fournitures scolaires aux jouets, en passant par les livres et les contributions financières, dans le but de soutenir intégralement le service 
+              pédiatrique de l'hôpital Robert Debré. À travers chaque collecte minutieusement organisée et exécutée avec passion, l'association s'efforce de 
+              tisser un filet de soutien solide, offrant un réconfort immédiat et un espoir durable aux enfants et à leurs familles, tandis qu'elle œuvre à 
+              insuffler la joie et la guérison au cœur de la communauté pédiatrique. Des petits gestes équivaut à des grands changements.
+            </p>
+
+            <div class="btn-group">
+              <button class="flex-btn">
+                <div class="btn-icon">
+                  <ion-icon name="medal-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <span class="span">Être bénévole ?</span>
+              </button>
+              <a href="#" class="btn btn-primary">Contactez-nous</a>              
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 
+        - #DONATIONS
+      -->
+      <section class="section service" id="features" aria-label="service">
+        <div class="container">
+          <p class="section-subtitle text-center">-Donnez un peu, offrez un sourire-</p>
+          <h2 class="h2 section-title text-center">Donations</h2>
+          <p class="section-text text-center" style="text-align: center;">
+            Découvrez les multiples façons dont vous pouvez répandre des sourires en soutenant <b>Un Don, Un Smile</b>
+          </p>
+
+          <ul class="grid-list">
+            <li>
+              <div class="service-card has-after" style="background-color: #3ab9bd; color: #ffffff; border-radius: 10px">
+                <div class="card-content">
+                  <h3 class="h3 card-title" style="text-align: center; color: #ffffff">Collecte de founitures scolaires</h3>
+                  <p class="card-text" style="text-align: justify;">
+                    Vos dons comme les cahiers et de différentes tailles et types, tels que des cahiers lignés, à carreaux ou à pages blanches, peut permettre aux enfants
+                    de prendre des notes, dessiner ou écrire des histoires. Les crayons de qualités adaptés aux enfants offrant une variétés de couleurs peut amener à encourager la 
+                    créativité artistique. Les stylos et autres articles essentiels pour aider les enfants à poursuivre leur éducation pendant leur séjour à l'hôpital.
+                  </p>
+                  <a href="/fourniture.html" class="href">Voir d'avantage</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="service-card has-after" style="background-color: #84bba3; color: #ffffff; border-radius: 10px">
+                <div class="card-content">
+                  <h3 class="h3 card-title" style="text-align: center; color: #ffffff"">Campagne de collecte de jouets</h3>
+                  <p class="card-text" style="text-align: justify;">
+                    Rassembler des jouets neufs ou en bon état pour offrir du réconfort et du divertissement aux enfants pendant leur traitement médical. Les jeux de sociétés adaptés aux enfants, tels que 
+                    des jeux de mémoire ou des jeux de correspondance, sont parfaits pour en groupe et encourager le socialisation. Les jouets non bruyant commes des figurines, des poupées pourront permettre 
+                    aux enfants de créer des histoires et d'exprimer leur imagination pendant leur séjour.  
+                  </p>
+                  <a href="/fourniture.html" class="href">Voir d'avantage</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="service-card has-after" style="background-color: #efa829; color: #ffffff; border-radius: 10px">
+                <div class="card-content">
+                  <h3 class="h3 card-title" style="text-align: center; color: #ffffff"">Collecte de livres pour enfants</h3>
+                  <p class="card-text" style="text-align: justify;">
+                    Rassembler des jouets neufs ou en bon état pour offrir du réconfort et du divertissement aux enfants pendant leur traitement médical. Les jeux de sociétés adaptés aux enfants, tels que 
+                    des jeux de mémoire ou des jeux de correspondance, sont parfaits pour en groupe et encourager le socialisation. Les jouets non bruyant commes des figurines, des poupées pourront permettre 
+                    aux enfants de créer des histoires et d'exprimer leur imagination pendant leur séjour.  
+                  </p>
+                  <a href="/fourniture.html" class="href">Voir d'avantage</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="service-card has-after" style="background-color: #ed8f44; color: #ffffff; border-radius: 10px">
+                <div class="card-content">
+                  <h3 class="h3 card-title" style="text-align: center; color: #ffffff"">Collecte de vêtements et de fournitures pour bébés</h3>
+                  <p class="card-text" style="text-align: justify;">
+                    Rassembler des jouets neufs ou en bon état pour offrir du réconfort et du divertissement aux enfants pendant leur traitement médical. Les jeux de sociétés adaptés aux enfants, tels que 
+                    des jeux de mémoire ou des jeux de correspondance, sont parfaits pour en groupe et encourager le socialisation. Les jouets non bruyant commes des figurines, des poupées pourront permettre 
+                    aux enfants de créer des histoires et d'exprimer leur imagination pendant leur séjour.  
+                  </p>
+                  <a href="/fourniture.html" class="href">Voir d'avantage</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="service-card has-after" style="background-color: #d54b72; color: #ffffff; border-radius: 10px">
+                <div class="card-content">
+                  <h3 class="h3 card-title" style="text-align: center; color: #ffffff"">Campagne de collecte de matériel artistique</h3>
+                  <p class="card-text" style="text-align: justify;">
+                    Rassembler des jouets neufs ou en bon état pour offrir du réconfort et du divertissement aux enfants pendant leur traitement médical. Les jeux de sociétés adaptés aux enfants, tels que 
+                    des jeux de mémoire ou des jeux de correspondance, sont parfaits pour en groupe et encourager le socialisation. Les jouets non bruyant commes des figurines, des poupées pourront permettre 
+                    aux enfants de créer des histoires et d'exprimer leur imagination pendant leur séjour.  
+                  </p>
+                  <a href="/fourniture.html" class="href">Voir d'avantage</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="service-card has-after" style="background-color: #cd2478; color: #ffffff; border-radius: 10px">
+                <div class="card-content">
+                  <h3 class="h3 card-title" style="text-align: center; color: #ffffff"">Collecte de produits de soins personnels</h3>
+                  <p class="card-text" style="text-align: justify;">
+                    Rassembler des jouets neufs ou en bon état pourra offrir du réconfort et du divertissement aux enfants pendant leur traitement médical. Les jeux de sociétés adaptés aux enfants, tels que 
+                    des jeux de mémoire ou des jeux de correspondance, sont parfaits pour en groupe et encourager le socialisation. Les jouets non bruyant commes des figurines, des poupées pourront permettre 
+                    aux enfants de créer des histoires et d'exprimer leur imagination pendant leur séjour.  
+                  </p>
+                  <a href="/fourniture.html" class="href">Voir d'avantage</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="service-card has-after" style="background-color: #3ab9bd; color: #ffffff; border-radius: 10px">
+                <div class="card-content">
+                  <h3 class="h3 card-title" style="text-align: center; color: #ffffff"">Collecte de divertissements pour les familles</h3>
+                  <p class="card-text" style="text-align: justify;">
+                    Amasser des cartes-cadeaux pour des activités de loisirs, des billets pour des événements culturels ou des abonnements à des services de streaming permettra d'offrir des moments de détente 
+                    et de divertissement aux familles des enfants hospitalisés.
+                  </p>
+                  <a href="/fourniture.html" class="href">Voir d'avantage</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="service-card has-after" style="background-color: #84bba3; color: #ffffff; border-radius: 10px">
+                <div class="card-content">
+                  <h3 class="h3 card-title" style="text-align: center; color: #ffffff"">Collecte de fourniture pour les parents</h3>
+                  <p class="card-text" style="text-align: justify;">
+                    Rassembler des jouets neufs ou en bon état permettra d'offrir du réconfort et du divertissement aux enfants pendant leur traitement médical. Les jeux de sociétés adaptés aux enfants, tels que 
+                    des jeux de mémoire ou des jeux de correspondance, sont parfaits pour en groupe et encourager le socialisation. Les jouets non bruyant commes des figurines, des poupées pourront permettre 
+                    aux enfants de créer des histoires et d'exprimer leur imagination pendant leur séjour.  
+                  </p>
+                  <a href="/fourniture.html" class="href">Voir d'avantage</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <a href="#" class="btn btn-primary">Voir les autres donnations</a>
+
+        </div>
+      </section>
+      
+      <!-- 
+        - #EQUIPES
+      -->
+      <section class="section service" id="services" aria-label="service">
+        <div class="container">
+
+          <p class="section-subtitle text-center">-Une équipe unie pour faire la différence-</p>
+
+          <h2 class="h2 section-title text-center">L'équipes</h2>
+
+          <p class="section-text text-center">
+            Notre équipe est composée de professionnels dévoués et passionnés, unis dans le but d'offrir 
+            le meilleur soutien aux enfants malades. Ensemble, nous nous engageons à fournir des soins de qualité, du 
+            réconfort et de l'espoir à chaque enfant et à leur famille.
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="service-card has-after">
+                <figure class="card-icon">
+                  <img src="./assets/images/man.png" width="110" height="110" loading="lazy" alt="App Development"
+                    class="img">
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3 card-title" style="text-align: center;">LUCHMUN Shayan</h3>
+                  <p class="card-text" style="text-align: justify;">
+                    Notre président, LUCHMUN Shayan, incarne la passion et l'engagement au cœur de notre association <b>Un don, Un smile</b>. Doté d'une vision inspirante, 
+                    il guide notre équipe avec détermination pour réaliser notre mission de répandre la joie et l'espoir à travers chaque don et sourire 
+                    offerts aux enfants du service pédiatrique de l'hôpital Robert Debré.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card has-after">
+                <figure class="card-icon">
+                  <img src="./assets/images/women.png" width="110" height="110" loading="lazy" alt="App Development"
+                    class="img">
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3 card-title" style="text-align: center;">CEVAK Mathilde</h3>
+                  <p class="card-text" style="text-align: justify;">
+                    La secrétaire, CEVAK Mathilde, est le pilier administratif de notre association <b>Un don, Un smile</b>. Avec une organisation 
+                    impeccable et une attention méticuleuse aux détails, elle assure le bon fonctionnement administratif garantissant que chaque don 
+                    et sourire parviennent à leur destination avec efficacité.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card has-after">
+                <figure class="card-icon">
+                  <img src="./assets/images/man.png" width="110" height="110" loading="lazy" alt="App Development"
+                    class="img">
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3 card-title" style="text-align: center;">BLASSUTO Hugo</h3>
+                  <p class="card-text" style="text-align: justify;">
+                    Notre responsable des dons, BLASSUTO Hugo, est au cœur de notre mission à <b>Un don, Un smile</b>. Avec une passion contagieuse, il coordonne les efforts 
+                    pour collecter des dons essentiels qui apportent un sourire aux enfants du service pédiatrique de l'hôpital Robert Debré. Son dévouement assure 
+                    que chaque geste de générosité contribue directement au bien-être des enfants malades.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card has-after">
+                <figure class="card-icon">
+                  <img src="./assets/images/man.png" width="110" height="110" loading="lazy" alt="App Development"
+                    class="img">
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3 card-title" style="text-align: center;">STAHL Romain</h3>
+                  <p class="card-text" style="text-align: justify;">
+                    Notre chargé des dons, STAHL Romain, est le moteur de notre mission à <b>Un don, Un smile</b>. Avec dévouement, il coordonne la collecte des dons cruciaux qui apportent 
+                    réconfort et espoir aux enfants du service pédiatrique de l'hôpital Robert Debré. Son engagement assure que chaque contribution enrichit directement la vie 
+                    des enfants malades.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card has-after">
+                <figure class="card-icon">
+                  <img src="./assets/images/man.png" width="110" height="110" loading="lazy" alt="App Development"
+                    class="img">
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3 card-title" style="text-align: center;">AHERDANE Aziza</h3>
+                  <p class="card-text" style="text-align: justify;">
+                    Notre responsable de la communication visuelle, AHERDANE Aziza, illumine notre cause à <b>Un don, Un smile</b>. Avec créativité et sensibilité, il façonne visuellement notre message, inspirant 
+                    ainsi la générosité et l'engagement envers les enfants du service pédiatrique de l'hôpital Robert Debré. Son talent donne vie à notre mission, reliant les cœurs et les sourires à 
+                    travers chaque image et chaque design.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card has-after">
+                <figure class="card-icon">
+                  <img src="./assets/images/women.png" width="110" height="110" loading="lazy" alt="App Development"
+                    class="img">
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3 card-title" style="text-align: center;">GRANGIRAD Camille</h3>
+                  <p class="card-text" style="text-align: justify;">
+                    Notre responsable communication partenariat, GRANGIRAD Camille, est le lien essentiel de notre association 'Un don, Un smile'. Avec compétence et détermination, il forge des collaborations fructueuses pour 
+                    soutenir notre mission en faveur des enfants du service pédiatrique de l'hôpital Robert Debré. Son engagement favorise des partenariats solides qui renforcent notre capacité à apporter réconfort 
+                    et espoir à ceux qui en ont le plus besoin.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card has-after">
+                <figure class="card-icon">
+                  <img src="./assets/images/women.png" width="110" height="110" loading="lazy" alt="App Development"
+                    class="img">
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3 card-title" style="text-align: center;">ARNAUD Laura</h3>
+                  <p class="card-text" style="text-align: justify;">
+                    Notre responsable communication interne, ARNAUD Laura, est le ciment de notre équipe à <b>Un don, Un smile</b>. Avec empathie et efficacité, il assure une communication fluide et transparente au sein de notre 
+                    association. Son engagement garantit que chaque membre de l'équipe est informé et soutenu dans la poursuite de notre mission visant à apporter du réconfort et de l'espoir aux enfants du service 
+                    pédiatrique de l'hôpital Robert Debré.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card has-after">
+                <figure class="card-icon">
+                  <img src="./assets/images/women.png" width="110" height="110" loading="lazy" alt="App Development"
+                    class="img">
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3 card-title" style="text-align: center;">ROCARD Laurie</h3>
+                  <p class="card-text" style="text-align: justify;">
+                    Notre chargée de communication interne, ROCARD Laurie, joue un rôle central dans la cohésion de notre équipe chez <b>Un don, Un smile</b>. Grâce à son dévouement et à sa clarté de communication, elle veille à ce que chaque 
+                    membre soit informé et motivé. Son engagement contribue à renforcer notre unité dans la mission commune d'apporter joie et espoir aux enfants du service pédiatrique de l'hôpital Robert Debré.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!--
+        - #BLOG
+      -->
+      <section class="section service" id="services" aria-label="service">
+        <div class="container">
+
+          <p class="section-subtitle text-center">-Découvrez notre blog : Inspirez-vous!-</p>
+
+          <h2 class="h2 section-title text-center">L'équipes</h2>
+
+          <p class="section-text text-center">
+            Notre équipe est composée de professionnels dévoués et passionnés, unis dans le but d'offrir 
+            le meilleur soutien aux enfants malades. Ensemble, nous nous engageons à fournir des soins de qualité, du 
+            réconfort et de l'espoir à chaque enfant et à leur famille.
+          </p>
+        </div>
+      </section>
+      
+      <!-- 
+        - #FAQ
+      -->
+
+      <!-- <section class="section faq" aria-label="frequently asked questions">
+        <div class="container">
+          <div class="title-wrapper">
+            <h2 class="h2 section-title">Discover Frequently Asked Questions?</h2>
+            <a href="#" class="btn btn-primary">Work Together</a>
+          </div>
+
+          <ul class="grid-list">
+            <li>
+              <div class="faq-card">
+                <button class="card-action" data-accordion-action>
+                  <h3 class="h3 card-title">
+                    01. Curious about how to build your own UX strategy? Here are five simple steps.
+                  </h3>
+                  <div class="action-icon">
+                    <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                    <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                  </div>
+                </button>
+                <div class="card-content">
+                  <p>
+                    Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae
+                    posuere semper, libero ex
+                    hendrerit nunc, ac sagittis eros metus ut diam. Donec a nibh in libero maximus vehicula. Etiam sit
+                    amet condimentum
+                    erat. Pellentesque ultrices sagittis turpis, quis tempus ante viverra et.Morbi aliquam quis quam in
+                    luctus. Nullam
+                    tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, tincidunt pulvinar imperdiet.
+                    Sed varius, diam
+                    vitae posuere semper.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="faq-card">
+                <button class="card-action" data-accordion-action>
+                  <h3 class="h3 card-title">
+                    02. Where Could a Career in UX Take You? Agency vs. In-House vs. Freelance?
+                  </h3>
+                  <div class="action-icon">
+                    <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                    <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                  </div>
+                </button>
+                <div class="card-content">
+                  <p>
+                    Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae
+                    posuere semper, libero ex
+                    hendrerit nunc, ac sagittis eros metus ut diam. Donec a nibh in libero maximus vehicula. Etiam sit
+                    amet condimentum
+                    erat. Pellentesque ultrices sagittis turpis, quis tempus ante viverra et.Morbi aliquam quis quam in
+                    luctus. Nullam
+                    tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, tincidunt pulvinar imperdiet.
+                    Sed varius, diam
+                    vitae posuere semper.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="faq-card">
+                <button class="card-action" data-accordion-action>
+                  <h3 class="h3 card-title">
+                    03. What Is a Problem Statement in UX? (And How To Write One?
+                  </h3>
+                  <div class="action-icon">
+                    <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                    <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                  </div>
+                </button>
+                <div class="card-content">
+                  <p>
+                    Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae
+                    posuere semper, libero ex
+                    hendrerit nunc, ac sagittis eros metus ut diam. Donec a nibh in libero maximus vehicula. Etiam sit
+                    amet condimentum
+                    erat. Pellentesque ultrices sagittis turpis, quis tempus ante viverra et.Morbi aliquam quis quam in
+                    luctus. Nullam
+                    tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, tincidunt pulvinar imperdiet.
+                    Sed varius, diam
+                    vitae posuere semper.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="faq-card">
+                <button class="card-action" data-accordion-action>
+                  <h3 class="h3 card-title">
+                    04. There are several techniques UX designers employ to arrive at a succinct?
+                  </h3>
+                  <div class="action-icon">
+                    <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                    <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                  </div>
+                </button>
+                <div class="card-content">
+                  <p>
+                    Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae
+                    posuere semper, libero ex
+                    hendrerit nunc, ac sagittis eros metus ut diam. Donec a nibh in libero maximus vehicula. Etiam sit
+                    amet condimentum
+                    erat. Pellentesque ultrices sagittis turpis, quis tempus ante viverra et.Morbi aliquam quis quam in
+                    luctus. Nullam
+                    tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, tincidunt pulvinar imperdiet.
+                    Sed varius, diam
+                    vitae posuere semper.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="faq-card">
+                <button class="card-action" data-accordion-action>
+                  <h3 class="h3 card-title">
+                    05. What are the obstacles users are facing? What are they trying to do?
+                  </h3>
+                  <div class="action-icon">
+                    <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                    <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                  </div>
+                </button>
+                <div class="card-content">
+                  <p>
+                    Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae
+                    posuere semper, libero ex
+                    hendrerit nunc, ac sagittis eros metus ut diam. Donec a nibh in libero maximus vehicula. Etiam sit
+                    amet condimentum
+                    erat. Pellentesque ultrices sagittis turpis, quis tempus ante viverra et.Morbi aliquam quis quam in
+                    luctus. Nullam
+                    tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, tincidunt pulvinar imperdiet.
+                    Sed varius, diam
+                    vitae posuere semper.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section> -->
+    </article>
+  </main>
+
+  <!-- 
+    - #FOOTER
+  -->
+  <footer class="footer">
+    <div class="footer-top section">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="#" class="logo">Hoolix</a>
+          <p class="footer-text">
+            Pour vous inscrire à notre association, veuillez fournir votre adresse e-mail afin que nous puissions vous contacter dans les meilleurs délais.
+          </p>
+          <form action="" class="newsletter-form">
+            <input type="email" name="email_address" placeholder="Enter your email" required class="email-field">
+            <button type="submit" class="form-btn">
+              <ion-icon name="paper-plane" aria-hidden="true"></ion-icon>
+            </button>
+          </form>
+        </div>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">L'association</p>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Accueil</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Services</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Donation</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Blog</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Donnation</p>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Peluches</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Livres pour enfant (histoires & éducatifs)</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Matériel artistique</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Jouets adaptés à différents âges et intérêts</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Contactez-nous</p>
+          </li>
+          <li class="footer-item">
+            <ion-icon name="mail" aria-hidden="true"></ion-icon>
+            <a href="mailto:info@hoolix.com" class="contact-link">undonunsmile@gmail.com</a>
+          </li>
+          <li class="footer-item">
+            <ul class="social-list">
+              <li>
+                <a href="https://www.linkedin.com/company/un-don-un-smile/?viewAsMember=true" class="social-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2024 Un don Un smile | All Rights Reserved by <a href="#" class="copyright-link">Un don Un smile</a>
+        </p>
+        <!-- <ul class="footer-bottom-list">
+          <li>
+            <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#" class="footer-bottom-link">Terms of Use</a>
+          </li>
+        </ul> -->
+      </div>
+    </div>
+  </footer>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
