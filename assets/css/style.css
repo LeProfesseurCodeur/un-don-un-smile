@@ -1,38 +1,29 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
-
 :root {
 
   /**
    * colors
    */
 
-  --rich-black-fogra-29-1: hsl(215, 31%, 14%);
+  --rich-black-fogra-29-1: hsl(181, 54%, 48%);
   --rich-black-fogra-29-2: hsl(230, 14%, 8%);
-  --rich-black-fogra-39: hsl(158, 29%, 5%);
+  --rich-black-fogra-39: hsl(188, 82%, 36%);
   --granite-gray: hsl(0, 0%, 40%);
   --go-green_50: hsla(145, 63%, 42%, 0.5);
   --go-green_8: hsla(145, 63%, 42%, 0.08);
   --go-green_5: hsla(145, 63%, 42%, 0.05);
   --light-gray: hsl(0, 0%, 80%);
-  --mint-cream: hsl(160, 100%, 98%);
+  --mint-cream: hsl(180, 89%, 96%);
   --cultured: hsl(0, 0%, 93%);
   --go-green: hsl(145, 63%, 42%);
+  --go-blue: hsl(181, 68%, 32%);
+  --go-blue-200: hsl(174, 68%, 78%);
+  --go-blue-400: hsl(179, 53%, 50%);
+  --go-blue-500: hsl(180, 65%, 40%);
   --white: hsl(0, 0%, 100%);
+  --blue: hsl(188, 82%, 36%);
   --jet: hsl(0, 0%, 18%);
+  --aqua-jet: hsl(183, 48%, 19%);
+  --aqua-jet-300: hsl(177, 62%, 64%);
 
   /**
    * typography
@@ -86,10 +77,6 @@
   --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
 
 }
-
-
-
-
 
 /*-----------------------------------*\
   #RESET
@@ -157,10 +144,6 @@ body {
 
 ::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }
 
-
-
-
-
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
@@ -185,7 +168,7 @@ body {
 .h2,
 .h3,
 .h2-sm {
-  color: var(--rich-black-fogra-29-1);
+  color: var(--go-blue-400);
   font-family: var(--ff-cuprum);
 }
 
@@ -222,11 +205,11 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--go-green);
+  background-color: var(--go-blue-400);
   color: var(--white);
 }
 
-.btn-primary:is(:hover, :focus) { background-color: var(--rich-black-fogra-29-1); }
+.btn-primary:is(:hover, :focus) { background-color: var(--go-blue); }
 
 .flex-btn {
   display: flex;
@@ -250,7 +233,7 @@ body {
 .text-center { text-align: center; }
 
 .section-subtitle {
-  color: var(--go-green);
+  color: var(--go-blue);
   font-weight: var(--fw-500);
 }
 
@@ -350,7 +333,7 @@ body {
   transition: var(--transition-1);
 }
 
-.navbar-link:is(:hover, :focus) { color: var(--go-green); }
+.navbar-link:is(:hover, :focus) { color: var(--aqua-jet); }
 
 .overlay {
   position: fixed;
@@ -388,7 +371,7 @@ body {
 }
 
 .hero-subtitle {
-  color: var(--go-green);
+  color: var(--go-blue-400);
   font-size: var(--fs-12);
   font-weight: var(--fw-500);
   max-width: max-content;
@@ -401,12 +384,12 @@ body {
   left: -20px;
   width: 15px;
   height: 2px;
-  background-color: var(--go-green);
+  background-color: var(--go-blue-400);
 }
 
 .hero-title { margin-block: 10px 15px; }
 
-.hero-text { color: var(--rich-black-fogra-29-1); }
+.hero-text { color: var(--go-blue-400); }
 
 .hero .btn-group { margin-block-start: 40px; }
 
@@ -489,12 +472,12 @@ body {
 .about .btn-group .flex-btn { gap: 10px; }
 
 .about .btn-icon ion-icon {
-  color: var(--go-green);
+  color: var(--go-blue-400);
   font-size: 40px;
 }
 
 .about .btn-group .span {
-  color: var(--go-green);
+  color: var(--go-blue-400);
   font-family: var(--ff-cuprum);
   font-size: var(--fs-6);
   font-weight: var(--fw-600);
@@ -524,7 +507,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--go-green);
+  background-color: var(--go-blue-400);
   transition: var(--transition-2);
 }
 
@@ -682,7 +665,8 @@ body {
 \*-----------------------------------*/
 
 .footer {
-  background-color: var(--rich-black-fogra-29-2);
+  /* background-color: var(--blue); */
+  background: linear-gradient(90deg, rgba(25,70,72,1) 0%, rgba(25,106,108,1) 35%, rgba(25,70,72,1) 100%);
   color: var(--cultured);
 }
 
@@ -693,7 +677,7 @@ body {
 
 .footer .logo { color: var(--white); }
 
-.footer-text { margin-block: 25px; }
+.footer-text { margin-bottom: 5%; }
 
 .newsletter-form {
   position: relative;
@@ -703,13 +687,13 @@ body {
 .email-field {
   color: var(--white);
   font-size: var(--fs-11);
-  border: 1px solid var(--granite-gray);
+  border: 1px solid white;
   padding: 15px;
   border-radius: var(--radius-5);
 }
 
 .footer .form-btn {
-  background-color: var(--go-green);
+  background-color: var(--go-blue);
   color: var(--white);
   font-size: 24px;
   position: absolute;
@@ -733,7 +717,7 @@ body {
   transition: var(--transition-1);
 }
 
-.footer-link:is(:hover, :focus) { color: var(--go-green); }
+.footer-link:is(:hover, :focus) { color: var(--aqua-jet-300); }
 
 .footer-item,
 .social-list {
@@ -746,36 +730,38 @@ body {
 
 .footer-item > ion-icon {
   flex-shrink: 0;
-  color: var(--go-green);
+  color: var(--go-blue-500);
   font-size: 20px;
   margin-block-start: 3px;
 }
 
 .contact-link { transition: var(--transition-1); }
 
-.contact-link:not(.address):is(:hover, :focus) { color: var(--go-green); }
+.contact-link:not(.address):is(:hover, :focus) { color: var(--aqua-jet-300); }
 
 .footer-item:last-child {
   margin-block-start: 25px;
   padding-block-start: 25px;
-  border-block-start: 1px solid var(--granite-gray);
+  border-block-start: 1px solid white;
 }
 
 .social-link {
-  font-size: 14px;
-  border: 1px solid var(--granite-gray);
+  font-size: 30px;
+  /* border: 1px solid var(--granite-gray); */
+  border-radius: 10px;
   padding: 10px;
   transition: var(--transition-1);
 }
 
 .social-link:is(:hover, :focus) {
-  background-color: var(--go-green);
-  border-color: var(--go-green);
+  background-color: var(--go-blue);
+  border-color: var(--go-blue);
+  border-radius: 10px;
 }
 
 .footer-bottom {
   padding-block: 15px;
-  border-block-start: 1px solid var(--jet);
+  /* border-block-start: 1px solid white; */
 }
 
 .copyright {
@@ -786,7 +772,7 @@ body {
 
 .copyright-link {
   display: inline-block;
-  color: var(--go-green);
+  color: var(--aqua-jet-300);
   font-weight: var(--fw-500);
 }
 
@@ -802,6 +788,10 @@ body {
 }
 
 .footer-bottom-link:is(:hover, :focus) { color: var(--go-green); }
+
+input::placeholder {
+  color: var(--cultured);
+}
 
 
 
@@ -973,7 +963,7 @@ body {
   }
 
   .navbar-link {
-    color: var(--rich-black-fogra-29-1);
+    color: var(--go-blue-400);
     font-weight: var(--fw-500);
     padding-block: 0;
   }

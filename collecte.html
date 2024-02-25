@@ -1,11 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Un don, Un smile - Ensemble, offrons-leur de la joie</title>
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo-sf.png" type="image/svg+xml">
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cuprum:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
-    <h1>Hello world</h1>
+  <!-- 
+    - #HEADER
+  -->
+    <header class="header" data-header>
+        <div class="container">
+            <img src="./assets/images/logo-sf.png" style="position: absolute; width: 140px; margin-top: 25px;">
+            <a href="#" class="logo"></a>
+            <nav class="navbar" data-navbar style="margin-right: auto; margin-left: auto;">
+                <div class="wrapper">
+                    <img src="./assets/images/logo-sf.png" style="position: absolute; width: 140px; margin-top: 25px;">
+                    <a href="#" class="logo"></a>
+                    <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                        <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                </div>
+
+                <ul class="navbar-list">
+                    <li>
+                    <a href="index.html" class="navbar-link" data-nav-link>Accueil</a>
+                    </li>
+                    <li>
+                    <a href="#about" class="navbar-link" data-nav-link>L'association</a>
+                    </li>
+                    <li class="parent">
+                    <a href="#features" class="navbar-link" data-nav-link>Donnations</a>
+                    <ul class="child">
+                        <li><a href="collecte.html" class="">La collecte</a></li>
+                    </ul>
+                    </li>
+                    <li>
+                    <a href="#services" class="navbar-link" data-nav-link>L'équipes</a>
+                    </li>
+                    <style>
+                    .parent:hover>ul {
+                        display: block;
+                        position: absolute;
+                    }
+
+                    .child {
+                        display: none;
+                    }
+
+                    .child li {
+                        background-color: #edfffd;
+                        line-height: 35px;
+                        width: 71%;
+                        border-radius: 5px;
+                        text-align: center;
+                    }
+
+                    .child li a {
+                        color: #000000;
+                    }
+
+                    ul {
+                        list-style: none;
+                        margin: 0;
+                        padding: 0px;
+                        min-width: 8.25em;
+                    }
+
+                    ul ul ul {
+                        left: 100%;
+                        top: 0;
+                        margin-left: 1px;
+                    }
+
+                    .expand {
+                        font-size: 12px;
+                        float: right;
+                        margin-right: 5px;
+                    }
+                    </style>
+                    <li>
+                    <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+                    </li>
+                    <li>
+                    <a href="#contact" class="navbar-link" data-nav-link>Contactez-nous</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+                <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+            </button>
+
+            <div class="overlay" data-nav-toggler data-overlay></div>
+        </div>
+    </header>
+    <main>
+        <article>
+            <!-- 
+                - #ACCUEIL
+            -->
+            <section class="section hero" id="home" aria-label="hero">
+                <div class="container" style="grid-template-columns: 1fr 1.3fr;">
+                    <figure class="hero-banner has-before img-holder" style="--width: 650; --height: 650;">
+                        <img src="./assets/images/donate.jpeg" width="650" height="650" alt="hero banner" class="img-cover">
+                    </figure>
+                    <div class="hero-content">
+                        <p class="hero-subtitle has-before">Collecte de donation</p>
+                        <h1 class="h1 hero-title">Ensemble pour un sourire : Campagne de Collecte de Donations</h1>
+                        <p class="hero-text">
+                            Notre collecte de dons soutient les enfants du service pédiatrique de l'hôpital Robert Debré. Chaque don offre réconfort et espoir.
+                        </p>
+                        <div class="btn-group">
+                            <a href="#contact" class="btn btn-primary">Voir la collecte</a>
+                        </div>
+                    </div>
+                </div>
+          </section>
+        </article>
+    </main>
 </body>
-</html>
