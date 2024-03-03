@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Un don, Un smile - Ensemble, offrons-leur de la joie</title>
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo-sf.png" type="image/svg+xml">
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cuprum:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- 
+    - #HEADER
+  -->
+    <header class="header" data-header>
+        <div class="container">
+            <img src="./assets/images/logo-sf.png" style="position: absolute; width: 140px; margin-top: 25px;">
+            <a href="#" class="logo"></a>
+            <nav class="navbar" data-navbar style="margin-right: auto; margin-left: auto;">
+                <div class="wrapper">
+                    <img src="./assets/images/logo-sf.png" style="position: absolute; width: 140px; margin-top: 25px;">
+                    <a href="#" class="logo"></a>
+                    <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                        <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                </div>
+
+                <ul class="navbar-list">
+                    <li>
+                    <a href="index.html" class="navbar-link" data-nav-link>Accueil</a>
+                    </li>
+                    <li>
+                    <a href="#about" class="navbar-link" data-nav-link>L'association</a>
+                    </li>
+                    <li class="parent">
+                    <a href="#features" class="navbar-link" data-nav-link>Donnations</a>
+                    <ul class="child">
+                        <li><a href="collecte.html" class="">La collecte</a></li>
+                    </ul>
+                    </li>
+                    <li>
+                    <a href="#services" class="navbar-link" data-nav-link>L'équipes</a>
+                    </li>
+                    <style>
+                    .parent:hover>ul {
+                        display: block;
+                        position: absolute;
+                    }
+
+                    .child {
+                        display: none;
+                    }
+
+                    .child li {
+                        background-color: #edfffd;
+                        line-height: 35px;
+                        width: 71%;
+                        border-radius: 5px;
+                        text-align: center;
+                    }
+
+                    .child li a {
+                        color: #000000;
+                    }
+
+                    ul {
+                        list-style: none;
+                        margin: 0;
+                        padding: 0px;
+                        min-width: 8.25em;
+                    }
+
+                    ul ul ul {
+                        left: 100%;
+                        top: 0;
+                        margin-left: 1px;
+                    }
+
+                    .expand {
+                        font-size: 12px;
+                        float: right;
+                        margin-right: 5px;
+                    }
+                    </style>
+                    <li>
+                    <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+                    </li>
+                    <li>
+                    <a href="#contact" class="navbar-link" data-nav-link>Contactez-nous</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+                <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+            </button>
+
+            <div class="overlay" data-nav-toggler data-overlay></div>
+        </div>
+    </header>
+    <main>
+        <article>
+            <!-- 
+                - #ACCUEIL
+            -->
+            <section class="section hero" id="home" aria-label="hero">
+                <div class="container" style="grid-template-columns: 1fr 1.3fr;">
+                    <figure class="hero-banner has-before img-holder" style="--width: 650; --height: 650;">
+                        <img src="./assets/images/donate.jpeg" width="650" height="650" alt="hero banner" class="img-cover">
+                    </figure>
+                    <div class="hero-content">
+                        <p class="hero-subtitle has-before">La foire aux questions</p>
+                        <h1 class="h1 hero-title">Découvrez notre FAQ pour tout savoir sur Un Don, Un Smile !</h1>
+                        <p class="hero-text">
+                            Notre FAQ : Vos questions, nos réponses. Explorez pour tout savoir sur Un Don, Un Smile !
+                        </p>
+                        <div class="btn-group">
+                            <a href="#faq" class="btn btn-primary">Voir la FAQ</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 
+                - #FAQ
+            -->
+
+            <section class="section faq" id="faq" aria-label="frequently asked questions">
+                <div class="container">
+                    <div class="title-wrapper">
+                        <h2 class="h2 section-title">Découvrez les questions fréquemment posées.</h2>
+                    </div>
+
+                    <ul class="grid-list">
+                        <li>
+                        <div class="faq-card">
+                            <button class="card-action" data-accordion-action>
+                            <h3 class="h3 card-title">
+                                01. Comment mes dons sont-ils utilisés ?
+                            </h3>
+                            <div class="action-icon">
+                                <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                                <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                            </div>
+                            </button>
+                            <div class="card-content">
+                            <p>
+                                Les dons que nous recevons sont utilisés pour soutenir les enfants du service pédiatrique de l'hôpital Robert Debré. Cela comprend 
+                                l'achat de fournitures médicales, le financement d'activités récréatives pour les enfants hospitalisés et le soutien aux familles 
+                                dans le besoin.
+                            </p>
+                            </div>
+                        </div>
+                        </li>
+
+                        <li>
+                        <div class="faq-card">
+                            <button class="card-action" data-accordion-action>
+                            <h3 class="h3 card-title">
+                                02. Puis-je faire un don en nature ?
+                            </h3>
+                            <div class="action-icon">
+                                <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                                <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                            </div>
+                            </button>
+                            <div class="card-content">
+                            <p>
+                                Oui, nous acceptons les dons en nature tels que des fournitures médicales, des jouets, des livres, des vêtements pour enfants, etc. 
+                                Veuillez nous contacter pour organiser la livraison ou le dépôt de vos dons.
+                            </p>
+                            </div>
+                        </div>
+                        </li>
+
+                        <li>
+                        <div class="faq-card">
+                            <button class="card-action" data-accordion-action>
+                            <h3 class="h3 card-title">
+                                03. Y a-t-il des possibilités de bénévolat avec Un Don, Un Smile ?
+                            </h3>
+                            <div class="action-icon">
+                                <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                                <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                            </div>
+                            </button>
+                            <div class="card-content">
+                            <p>
+                                Oui, nous sommes toujours à la recherche de bénévoles dévoués pour nous aider dans nos activités et événements. Si vous êtes intéressé 
+                                à vous impliquer, veuillez remplir le formulaire de contact sur notre site web et nous vous contacterons avec plus d'informations.
+                            </p>
+                            </div>
+                        </div>
+                        </li>
+
+                        <li>
+                            <div class="faq-card">
+                                <button class="card-action" data-accordion-action>
+                                    <h3 class="h3 card-title">
+                                        04. Comment puis-je en savoir plus sur les événements à venir organisés par Un Don, Un Smile ?
+                                    </h3>
+                                    <div class="action-icon">
+                                        <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                                        <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                                    </div>
+                                </button>
+                                <div class="card-content">
+                                    <p>
+                                        Pour rester informé de nos événements à venir, vous pouvez vous abonner à nos différents réseaux sociaux. Nous publions régulièrement 
+                                        des mises à jour sur nos événements et activités.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="faq-card">
+                                <button class="card-action" data-accordion-action>
+                                    <h3 class="h3 card-title">
+                                        05. Quelle est la transparence de Un Don, Un Smile concernant l'utilisation des fonds ?
+                                    </h3>
+                                    <div class="action-icon">
+                                        <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                                        <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                                    </div>
+                                </button>
+                                <div class="card-content">
+                                    <p>
+                                        Chez Un Don, Un Smile, nous sommes déterminés à maintenir une transparence totale concernant l'utilisation des fonds que nous recevons. 
+                                        Nous publions régulièrement des rapports détaillés sur notre site web, permettant à nos donateurs de voir exactement comment 
+                                        leurs dons sont utilisés pour soutenir les enfants du service pédiatrique de l'hôpital Robert Debré.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="faq-card">
+                                <button class="card-action" data-accordion-action>
+                                    <h3 class="h3 card-title">
+                                        06. Comment puis-je organiser une collecte de fonds ou un événement de sensibilisation pour Un Don, Un Smile ?
+                                    </h3>
+                                    <div class="action-icon">
+                                        <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                                        <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                                    </div>
+                                </button>
+                                <div class="card-content">
+                                    <p>
+                                        Nous encourageons toute initiative visant à collecter des fonds ou à sensibiliser à notre cause. Si vous souhaitez organiser un événement 
+                                        de collecte de fonds ou de sensibilisation, veuillez nous contacter pour obtenir des conseils et un soutien pour vous aider à rendre votre 
+                                        événement un succès.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="faq-card">
+                                <button class="card-action" data-accordion-action>
+                                    <h3 class="h3 card-title">
+                                        07. Comment puis-je rester informé des dernières nouvelles et des histoires inspirantes de Un Don, Un Smile ?
+                                    </h3>
+                                    <div class="action-icon">
+                                        <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                                        <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                                    </div>
+                                </button>
+                                <div class="card-content">
+                                    <p>
+                                        Pour rester informé des dernières nouvelles, des histoires inspirantes et des mises à jour de Un Don, Un Smile, nous vous invitons à vous 
+                                        abonner à notre newsletter et à nous suivre sur les réseaux sociaux. C'est un excellent moyen de rester connecté avec notre communauté et de 
+                                        partager notre mission avec vos amis et votre famille.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="faq-card">
+                                <button class="card-action" data-accordion-action>
+                                    <h3 class="h3 card-title">
+                                        08. Quelle est la différence entre un don régulier et un don ponctuel ?
+                                    </h3>
+                                    <div class="action-icon">
+                                        <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                                        <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                                    </div>
+                                </button>
+                                <div class="card-content">
+                                    <p>
+                                        Un don régulier est un engagement à faire un don à intervalles réguliers, par exemple chaque mois. Un don ponctuel est un don unique effectué à 
+                                        un moment donné. Les deux types de dons sont très appréciés et contribuent à soutenir nos initiatives en faveur des enfants malades.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="faq-card">
+                                <button class="card-action" data-accordion-action>
+                                    <h3 class="h3 card-title">
+                                        09. Quels types de programmes et d'activités bénéficient du soutien financier de Un Don, Un Smile ?
+                                    </h3>
+                                    <div class="action-icon">
+                                        <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                                        <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                                    </div>
+                                </button>
+                                <div class="card-content">
+                                    <p>
+                                        Un Don, Un Smile soutient une gamme variée de programmes et d'activités destinés à améliorer la vie des enfants malades et de leur famille. 
+                                        Cela comprend des initiatives telles que des programmes éducatifs, des activités récréatives, des services de soutien psychosocial et des 
+                                        subventions pour les besoins médicaux.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="faq-card">
+                                <button class="card-action" data-accordion-action>
+                                    <h3 class="h3 card-title">
+                                        10. Comment puis-je rester informé des dernières nouvelles et des mises à jour de Un Don, Un Smile ?
+                                    </h3>
+                                    <div class="action-icon">
+                                        <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                                        <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                                    </div>
+                                </button>
+                                <div class="card-content">
+                                    <p>
+                                        Pour rester informé des dernières nouvelles, des événements à venir et des histoires inspirantes, vous pouvez vous abonner à nos réseaux sociaux.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+    </main>
+
+
+  <!-- 
+    - #FOOTER
+  -->
+  <footer class="footer">
+    <div class="footer-top section">
+      <div class="container">
+        <div class="footer-brand">
+          <img src="./assets/images/logo-sf.png" style="width: 140px;"">
+
+          <p class="footer-text">
+            Pour vous inscrire à notre association, veuillez fournir votre adresse e-mail afin que nous puissions vous contacter dans les meilleurs délais.
+          </p>
+
+          <form action="" class="newsletter-form">
+            <input type="email" name="email_address" placeholder="Enter your email" required class="email-field">
+            <button type="submit" class="form-btn">
+              <ion-icon name="paper-plane" aria-hidden="true"></ion-icon>
+            </button>
+          </form>
+
+        </div>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">L'association</p>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Accueil</a>
+          </li>
+          <li>
+            <a href="#about" class="footer-link">L'association</a>
+          </li>
+          <li>
+            <a href="#features" class="footer-link">Donations</a>
+          </li>
+          <li>
+            <a href="#services" class="footer-link">L'équipes</a>
+          </li>
+          <li>
+            <a href="#blog" class="footer-link">Blog</a>
+          </li>
+          <li>
+            <a href="#contact" class="footer-link">Contactez-nous</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Donnations</p>
+          </li>
+          <li>
+            <a href="collecte.html" class="footer-link">Peluches</a>
+          </li>
+          <li>
+            <a href="collecte.html" class="footer-link">Livres pour enfant</a>
+          </li>
+          <li>
+            <a href="collecte.html" class="footer-link">Matériels artistiques</a>
+          </li>
+          <li>
+            <a href="collecte.html" class="footer-link">Jouets adaptés</a>
+          </li>
+          <li>
+            <a href="faq.html" class="footer-link">F.A.Q</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Contactez-nous</p>
+          </li>
+          <li class="footer-item">
+            <ion-icon name="mail" aria-hidden="true"></ion-icon>
+            <a href="mailto:info@hoolix.com" class="contact-link">undonunsmile@gmail.com</a>
+          </li>
+          <li class="footer-item">
+            <ul class="social-list">
+              <li>
+                <a href="https://www.linkedin.com/company/un-don-un-smile/about/" class="social-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/profile.php?id=61556746411962" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/un_don_un_smile/" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2024 Un don Un smile | All Rights Reserved by <a href="#" class="copyright-link">Un don Un smile</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+    <!-- 
+        - custom js link
+    -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- 
+        - ionicon link
+    -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
